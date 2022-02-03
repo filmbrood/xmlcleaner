@@ -30,3 +30,15 @@
 *.exe
 *.out
 *.app
+
+
+# Directories
+.vs/
+bin/
+bin-int/
+
+# VS 2019
+*.sln
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
