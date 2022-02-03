@@ -23,12 +23,13 @@ int main()
 {
     std::filesystem::path path = std::filesystem::current_path();
     std::string ext(".xml");
+    std::string extCap(".XML");
     std::vector<std::filesystem::path> xmlsToRemove;
 
     // Iterate through current path and find xml files, then push them into xmlsToRemove path vector
     for (const auto& activePath : std::filesystem::recursive_directory_iterator(path))
     {
-        if (activePath.path().extension() == ext)
+        if (activePath.path().extension() == ext || activePath.path().extension() == extCap)
         {
             xmlsToRemove.push_back(activePath);
             std::cout << "Found: " << activePath << std::endl;
