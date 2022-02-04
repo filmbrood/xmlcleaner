@@ -18,6 +18,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 #include <iostream>
 #include <filesystem>
 #include <string>
+#include <vector>
 
 int main()
 {
@@ -32,7 +33,7 @@ int main()
         if (activePath.path().extension() == ext || activePath.path().extension() == extCap)
         {
             xmlsToRemove.push_back(activePath);
-            std::cout << "Found: " << activePath << std::endl;
+            std::cout << "Found: " << activePath.path() << std::endl;
         }
     }
 
